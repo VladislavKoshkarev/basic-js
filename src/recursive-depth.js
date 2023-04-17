@@ -19,7 +19,7 @@ class DepthCalculator {
   calculateDepth(arr, initialDepth = 1) {
     let deepestPosition = initialDepth
     arr.forEach(array => { 
-      let innerDepth = 1
+      let innerDepth = initialDepth
       if (Array.isArray(array)) {
       innerDepth += this.calculateDepth(array)
       if (deepestPosition < innerDepth) deepestPosition = innerDepth
